@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding:  0;
+    box-sizing: border-box; 
+}
+
+body{
+ font-family: 'Shadows Into Light', cursive;
+}
+
+.app{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1{
+    margin: 50px 0px 30 0px;
+    font-size: 70px;
+    font-weight: bolder;
+}
+
+header p{
+    font-size: 35px;
+}
+
+.squares {
+    background-color: lightslategray;
+    width: 100%;
+    height: 350px;
+    margin: 30px;
+}
+
+.squares > div{
+    height: 50px;
+    width: 50px;
+    color: mintcream;
+}
+
+
+
+.pads{
+    background-color: lightblue;
+    width: 100%;
+    display: flex;
+  
+}
+
+.pads > div {
+    height: 100px;
+    width: 100px;
+    flex: 1;
+}
+
+.pad1{
+    background: lightcoral;
+}
+.pad2{
+    background: rgb(236, 228, 109);
+}
+.pad3{
+    background: rgb(160, 240, 128);
+}
+.pad4{
+    background: rgb(61, 182, 212);
+}
+.pad5{
+    background: rgb(189, 81, 216);
+}
+.pad6{
+    background: rgb(238, 25, 25);
+}
+
+.square1{
+    background: midnightblue;
+    margin: 5px;
+}
+.square2{
+    background: rgb(127, 127, 206);
+    margin: 5px;
+}
+.square3{
+    background: rgb(43, 43, 54);
+    margin: 5px;
+}
+.square4{
+    background: midnightblue;
+    margin: 5px;
+}
+.square5{
+    background: rgb(105, 105, 109);
+    margin: 5px;
+}
+.square6{
+    background: midnightblue;
+    margin: 5px;
+}
+
