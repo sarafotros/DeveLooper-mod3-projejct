@@ -1,7 +1,14 @@
 html {
     font-size: 10px;
-    background: url(https://i.imgur.com/b9r5sEL.jpg) bottom center;
+    background: url(image/ulises-ruiz-s9bFiWE5llI-unsplash.jpg) bottom center;
     background-size: cover;
+  }
+
+  .new-beat-form-container{
+    background-color: oldlace;
+    height: 80px;
+    width: 200px;
+  
   }
   
   body,html {

@@ -23,10 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     })
 
-    // sq1.addEventListener('click', function () {
-       
-    //     sq1.play()
-    // })
-console.log('hello')
+    
+    
 
 })
