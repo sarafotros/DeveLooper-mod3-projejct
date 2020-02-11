@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     })
 
-    const kick = document.querySelector("#kick")
+    
     
 
 })
