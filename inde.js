@@ -27,6 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
        
     //     sq1.play()
     // })
-
+console.log('hello')
 
 })
