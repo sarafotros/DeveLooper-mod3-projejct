@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
     fetchAndRenderUser();
 
 
-    
+
     //new loop Post
     saveLoopBtn.addEventListener('click', function () {
         const userDeck = [...document.querySelectorAll('.deck input[type=checkbox]')];
@@ -76,9 +76,9 @@ document.addEventListener("DOMContentLoaded", function (e) {
                 Headers: 'application/json'
              },
             body: JSON.stringify(bodyLoop)
-         })
-           .then(resp => resp.json())
-           .then(renderLoop)
+      })
+        .then(resp => resp.json())
+        .then(renderLoop)
     }
 
 
