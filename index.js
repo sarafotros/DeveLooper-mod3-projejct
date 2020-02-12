@@ -1,30 +1,44 @@
 
 document.addEventListener("DOMContentLoaded", function (e) {
     
-    const userURL = "http://127.0.0.1:3000/users/"
+    const userURL = "http://127.0.0.1:3000/users"
     const compositionURL = "http://127.0.0.1:3000/compositions/"
 
+    // function fetchAndRenderUsers() {
+    //     fetch(userURL)
+    //         .then(resp => resp.json())
+    //         .then(renderUsers)
+    // }
+
+
+
+    // new user login
     const form = document.querySelector("form")
-
-    form.addEventListener('submit', function (e) {
+    form.addEventListener('submit', function(e) {
         e.preventDefault()
-
         let bodyForm = {
-            username: form.username.value , 
+            name: form.username.value , 
             email: form.email.value
         }
 
+        newUser(bodyForm)
+        
     })
 
-    // fetch(fetchURL, {
-    //     method: "POST",
-    //     headers: { "Content-Type": "application/json" },
-    //     body: JSON.stringify(bodyFrom)
-    //     })
-    //     .then(resp => resp.json())
-    //     .then(renderUser);
-    //     form.reset();
-    // });
+    function newUser(bodyForm) {
+        fetch(userURL, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Headers": "application/json"
+        },
+        body: JSON.stringify(bodyForm)
+        })
+        .then(resp => resp.json())
+        .then(renderUser);
+        form.reset();
+        // form.style.display = "none"
+    }
 
 
 

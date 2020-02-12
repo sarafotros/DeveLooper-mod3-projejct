@@ -26,6 +26,7 @@ header h2{
     color :#cfcfcf;
 }
 
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -163,6 +164,12 @@ li.dropdown {
         display: inline-flex;  
        padding: 5%;
 }
+
+
+
+
+
+/* check box */
 
 
 input[type="checkbox"]{
