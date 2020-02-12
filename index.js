@@ -52,15 +52,6 @@ document.addEventListener("DOMContentLoaded", function (e) {
     }
 
 
-
-
-
-
-document.addEventListener("DOMContentLoaded", function (e) {
-    
-    const userURL = "http://127.0.0.1:3000/users"
-    const compositionURL = "http://127.0.0.1:3000/compositions/"
-
     const form = document.querySelector('form');
     const loadLoopDropDown = document.querySelector('.dropdown');
     const dropdownLoop = document.querySelector('.dropdown-content');
@@ -77,12 +68,12 @@ document.addEventListener("DOMContentLoaded", function (e) {
         });
    }
     
-    function showUser(user) {
-        const ptest = document.createElement('p')
-        ptest.innerText = user.name
-        const header = document.querySelector('header')
-        header.append(ptest)
-    }
+    // function showUser(user) {
+    //     const ptest = document.createElement('p')
+    //     ptest.innerText = user.name
+    //     const header = document.querySelector('header')
+    //     header.append(ptest)
+    // }
 
     // new user login
     form.addEventListener('submit', function(e) {
@@ -104,11 +95,12 @@ document.addEventListener("DOMContentLoaded", function (e) {
         body: JSON.stringify(bodyForm)
         })
         .then(resp => resp.json())
-        .then(renderUser);
-        form.reset();
+        .then(renderUser)
+        .then(form.reset)
+        
     }
 
-    fetchAndRenderUser();
+    
 
 
 
@@ -248,3 +240,4 @@ document.addEventListener("DOMContentLoaded", function (e) {
     sequencer()
 
 })
+
