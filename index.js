@@ -1,7 +1,52 @@
+document.addEventListener("DOMContentLoaded", function (e) {
+    
+    const userURL = "http://127.0.0.1:3000/users"
+    const compositionURL = "http://127.0.0.1:3000/compositions/"
 
-document.addEventListener("DOMContentLoaded", function(e){
+    // function fetchAndRenderUsers() {
+    //     fetch(userURL)
+    //         .then(resp => resp.json())
+    //         .then(renderUsers)
+    // }
+
+
+
+    // new user login
+    const form = document.querySelector("form")
+    form.addEventListener('submit', function(e) {
+        e.preventDefault()
+        let bodyForm = {
+            name: form.username.value , 
+            email: form.email.value
+        }
+
+        newUser(bodyForm)
+        
+    })
+
+    function newUser(bodyForm) {
+        fetch(userURL, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Headers": "application/json"
+        },
+        body: JSON.stringify(bodyForm)
+        })
+        .then(resp => resp.json())
+        .then(renderUser);
+        form.reset();
+        // form.style.display = "none"
+    }
+
+
+
+
+
+
     let context = new AudioContext();
     const tempoSlider = document.querySelector('#tempo-slider')
+
 
     tempoSlider.addEventListener('change', e => Tone.Transport.bpm.value = e.target.value
     )
@@ -81,4 +126,3 @@ document.addEventListener("DOMContentLoaded", function(e){
     sequencer()
 
 })
-
