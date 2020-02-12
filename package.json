@@ -1,0 +1,23 @@
+{
+  "name": "develooper-mod3-projejct",
+  "version": "1.0.0",
+  "description": "Drum/Beat Machine JavaScript",
+  "main": "index.js",
+  "dependencies": {
+    "tone": "14.3.21"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarafotros/DeveLooper-mod3-projejct.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sarafotros/DeveLooper-mod3-projejct/issues"
+  },
+  "homepage": "https://github.com/sarafotros/DeveLooper-mod3-projejct#readme"
+}
