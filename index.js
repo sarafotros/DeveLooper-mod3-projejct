@@ -4,25 +4,37 @@ document.addEventListener("DOMContentLoaded", function (e) {
     const userURL = "http://127.0.0.1:3000/users"
     const compositionURL = "http://127.0.0.1:3000/compositions/"
 
-    // function fetchAndRenderUsers() {
-    //     fetch(userURL)
-    //         .then(resp => resp.json())
-    //         .then(renderUsers)
-    // }
+    const form = document.querySelector('form');
+    const loadLoopDropDown = document.querySelector('.dropdown');
+    const dropdownLoop = document.querySelector('.dropdown-content');
+    const saveLoopBtn = document.querySelector('.save-button');
+
+    
 
 
+   function fetchAndRenderUser() {
+     fetch(userURL)
+        .then(resp => resp.json())
+        .then(function(user) {
+            showUser(user);
+        });
+   }
+    
+    function showUser(user) {
+        const ptest = document.createElement('p')
+        ptest.innerText = user.name
+        const header = document.querySelector('header')
+        header.append(ptest)
+    }
 
     // new user login
-    const form = document.querySelector("form")
     form.addEventListener('submit', function(e) {
         e.preventDefault()
         let bodyForm = {
             name: form.username.value , 
             email: form.email.value
         }
-
         newUser(bodyForm)
-        
     })
 
     function newUser(bodyForm) {
@@ -37,13 +49,65 @@ document.addEventListener("DOMContentLoaded", function (e) {
         .then(resp => resp.json())
         .then(renderUser);
         form.reset();
-        // form.style.display = "none"
+    }
+
+    fetchAndRenderUser();
+
+
+    
+    //new loop Post
+    saveLoopBtn.addEventListener('click', function () {
+        const userDeck = [...document.querySelectorAll('.deck input[type=checkbox]')];
+        const composition = userDeck.map(beat => beat.checked);
+
+        let bodyLoop = {
+            name: user.name,
+            layout: composition,
+            user_id: user.id
+        }
+        newLoop(bodyLoop)
+    })
+
+    function newLoop(bodyLoop) {
+      fetch(compositionURL, {
+            method: 'POST',
+            hearders: {
+                'Content-Type': 'application/json',
+                Headers: 'application/json'
+             },
+            body: JSON.stringify(bodyLoop)
+         })
+           .then(resp => resp.json())
+           .then(renderLoop)
     }
 
 
+    function fetchAndRenderLoops(){
+        fetch(compositionURL)
+            .then(resp => resp.json())
+            .then(renderLoops)
+    }
+
+    function renderLoops(loops) {
+        for (const loop of loops) {
+            renderLoop(loop)
+        }
+    }
+
+    function renderLoop(loop) {
+        const newLoop = document.createElement('a')
+        loadLoopDropDown.append(newLoop)
+    }
+    
+
+    loadLoopDropDown.addEventListener('click', function () {
+        showLoops(user)
+    })
+    
 
 
 
+ //////////////////////////////////////////////////////////////////////////////
 
     let context = new AudioContext();
     const tempoSlider = document.querySelector('#tempo-slider')
