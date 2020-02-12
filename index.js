@@ -16,10 +16,22 @@ document.addEventListener("DOMContentLoaded", function (e) {
     form.addEventListener('submit', function(e) {
         e.preventDefault()
         let bodyForm = {
-            name: form.username.value , 
+            name: form.name.value, 
             email: form.email.value
         }
 
+            alert("The form was submitted");
+      
+            document.querySelector('#formdiv').style.display = "none";
+            document.querySelector('ul').style.visibility = "visible";
+            const welcomeDiv = document.querySelector('#welcome')
+            welcomeDiv.style.visibility = "visible";
+            const h3 = document.createElement('h3')
+            h3.innerText = `Welcome ${bodyForm.name}`
+            welcomeDiv.appendChild(h3)
+
+            alert("after"); 
+        
         newUser(bodyForm)
         
     })
@@ -34,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
         body: JSON.stringify(bodyForm)
         })
         .then(resp => resp.json())
-        .then(renderUser);
+        // .then(renderUser);
         form.reset();
         // form.style.display = "none"
     }
