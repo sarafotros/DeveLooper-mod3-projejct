@@ -10,21 +10,53 @@
 <body>
   <div class="app">
       <header>
-          <h1>DeveLooper</h1>
+          <h1>🥁DeveLooper🥁</h1>
       </header>
-      
+
+ 
+  <div class=form>
+    <form style="max-width:500px;margin:auto">
+      <h2>Register Form</h2>
+      <div class="input-container">
+        <i class="fa fa-user icon"></i>
+        <input class="input-field" type="text" placeholder="Username" name="username">
+      </div>
+    
+      <div class="input-container">
+        <i class="fa fa-envelope icon"></i>
+        <input class="input-field" type="text" placeholder="Email" name="email">
+      </div>
+    
+    
+      <button type="submit" class="btn">Register</button>
+    </form>
+  </div>
+
+
+    <ul>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Load Your Loops</a>
+        <div class="dropdown-content">
+          <a href="#">Loop 1 </a>
+          <a href="#">Loop 2</a>
+          <a href="#">Loop 3</a>
+        </div>
+      </li>
+    </ul>
 
       <div class="sequencer">
           <div class="transport">
               <input label="start/stop" id="startStop" type="checkbox">
-              start/stop</label>
+               Start/ Stop</label>
 
           </div>
           
           <div class="tempoSlider">
-              <input id="tempo-slider" type="range" min="20" max="200" value="120">
-              <output id="bpm-output"></output><label> bpm</label>
+              <input id="tempo-slider" type="range" min="40" max="300" value="120">
+              <output id="bpm-output"></output><label> ♬ Tempo</label>
           </div>
+
+
       <div class="deck">
           <div class="kick">
             <input type="checkbox">
@@ -43,7 +75,7 @@
             <input type="checkbox">
             <input type="checkbox">
             <input type="checkbox">
-            <span>kick</span>
+            <span>KICK</span>
           </div>
           <div class="snare">
             <input type="checkbox">
@@ -144,35 +176,12 @@
       </div>
       </div>
 
-<!-- 
-      <audio data-key="65" class="sound" src="./sounds/456511__bay-area-bob__rave-pad-atmosphere-stab-c.wav"></audio>
-      <audio data-key="68" class="sound" src="./sounds/Casio-VZ-10M-Astral-C2.wav"></audio>
-      <audio data-key="71" class="sound" src="./sounds/E-Mu-Proteus-FX-Whales-C1.wav"></audio>
-      <audio data-key="74" class="sound" src="./sounds/Ensoniq-ESQ-1-Synth-Sweep-C4.wav"></audio>
-      <audio data-key="76" class="sound" src="./sounds/Ensoniq-SD-1-Bass-Pad-C3.wav"></audio>
-      <audio data-key="222" class="sound" src="./sounds/Ensoniq-ESQ-1-Omen-Pad-C2.wav"></audio>
+    
 
-      <div class="visual"></div>
-      <div class="pads">
-          <div data-key="65" class="pad" id="pad1">
-              <h2>a</h2>
-          </div>
-          <div data-key="68" class="pad" id="pad2">
-                  <h2>d</h2>
-          </div>
-          <div data-key="71" class="pad" id="pad3">
-                  <h2>g</h2>
-          </div>
-          <div data-key="74" class="pad" id="pad4">
-                  <h2>j</h2>
-          </div>
-          <div data-key="76" class="pad" id="pad5">
-                  <h2>l</h2>
-          </div>
-          <div data-key="222" class="pad" id="pad6">
-                  <h2>''</h2>'
-          </div>
-      </div> -->
+    <button class="save-button">♩ Save Your Loop ♩</button>
+
+  
+
 
   </div>
 </body>
