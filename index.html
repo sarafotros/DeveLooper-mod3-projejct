@@ -5,7 +5,9 @@
   <title>DeveLooper</title>
   <link rel="stylesheet" href="style.css">
   <script src="node_modules/tone/build/Tone.js"></script>
-  <script src="index.js"></script>
+  <script src="src/users.js"></script>
+  <script src="src/sequencer.js"></script>
+  <script src="src/bootstrap.js"></script>
 </head>
 
 <body>
@@ -18,13 +20,14 @@
 
 </div>
  
-  <div id="formdiv" class="form">
-    <form style="max-width:500px;margin:auto">
-      <h2>Register Form</h2>
+  <div id="registerForm">
+    <form>
+      <h2>Register</h2>
       <div class="input-container">
         <i class="fa fa-user icon"></i>
-        <input class="input-field" type="text" placeholder="Username" name="username">
+        <input class="input-field" type="text" placeholder="Name" name="username">
       </div>
+
     
       <div class="input-container">
         <i class="fa fa-envelope icon"></i>
@@ -36,16 +39,28 @@
     </form>
   </div>
 
-  <ul  style="visibility:hidden">
-    <li class="dropdown">
-      <a href="javascript:void(0)" class="dropbtn">Load Your Loops</a>
-      <div class="dropdown-content">
-        <a href="#">Loop 1 </a>
-        <a href="#">Loop 2</a>
-        <a href="#">Loop 3</a>
+  <div id="loginForm">
+    <form>
+      <h2>Login</h2>
+      <div class="input-container">
+        <i class="fa fa-user icon"></i>
+        <input class="input-field" type="text" placeholder="Name" name="username">
       </div>
-    </li>
-  </ul>
+
+    
+      <div class="input-container">
+        <i class="fa fa-envelope icon"></i>
+        <input class="input-field" type="text" placeholder="Email" name="email">
+      </div>
+    
+    
+      <button type="submit" class="btn">Login</button>
+    </form>
+  </div>
+
+  <select id="composition-list">
+    <option>Select composition</option>
+  </select>
 
       <div class="sequencer">
           <div class="transport">
@@ -181,6 +196,7 @@
 
     
 
+    <input id="composition-name" type="text" placeholder="Composition name">
     <button class="save-button">♩ Save Your Loop ♩</button>
 
   
