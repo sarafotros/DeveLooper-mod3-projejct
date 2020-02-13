@@ -126,7 +126,7 @@ form {
 } */
 
 /* Set a style for the submit button */
-.btn {
+/* .btn {
 	background-color: rgb(53, 123, 170);
 	color: white;
 	padding: 15px 20px;
@@ -136,11 +136,11 @@ form {
 	opacity: 0.9;
   border-radius: 5px;
 	box-shadow: 0 5px rgb(165, 152, 152);
-}
+} */
 
-/* .btn:hover {
+/* /* .btn:hover {
 	opacity: 1;
-}
+} */
 
 .save-button {
 	display: inline-block;
@@ -655,11 +655,11 @@ input[type="checkbox"]{
 /* SARA CSS FROM HERE */
 
 #composition-list{
-  padding: 10px;
-  height: 35px;
+  /* padding: 10px; */
+  /* height: 35px;
   margin: auto;
   background-color: rgb(230, 230, 230);
-  border:2px rgb(202, 191, 191) solid;
+  border:2px rgb(202, 191, 191) solid; */
  
 }
 #composition-name{
