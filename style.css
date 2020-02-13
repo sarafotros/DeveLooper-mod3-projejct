@@ -1,13 +1,15 @@
 * {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Dosis', sans-serif;
+  font-weight: bolder;
 }
 
-body,
+/* body,
 html {
-	font-family: 'Montserrat', sans-serif;
-}
+ font-family: 'Dosis', sans-serif;
+} */
 
 .app {
 	height: 100vh;
@@ -175,6 +177,10 @@ form {
 	padding: 5%;
 }
 
+/* The slider itself */
+
+
+
 /* check box */
 
 input[type='checkbox'] {
@@ -333,7 +339,7 @@ input[type='range'].slider:focus::-ms-fill-upper {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: rgb(170, 61, 61);
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -369,7 +375,7 @@ input:checked + .slider:before {
   border-radius: 4px;
 }
 
-
+/* 
 ul {
   list-style-type: none;
   margin: 0;
@@ -420,7 +426,7 @@ li.dropdown {
 
 .dropdown:hover .dropdown-content {
   display: block;
-}
+} */
 
 /* .form {
   width: 30%;
@@ -649,11 +655,12 @@ input[type="checkbox"]{
 /* SARA CSS FROM HERE */
 
 #composition-list{
-  height: 38px;
+  padding: 10px;
+  height: 35px;
   margin: auto;
   background-color: rgb(230, 230, 230);
   border:2px rgb(202, 191, 191) solid;
-  
+ 
 }
 #composition-name{
   height: 35px;
