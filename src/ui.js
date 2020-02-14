@@ -5,11 +5,18 @@ document.addEventListener("DOMContentLoaded", function (e) {
     const registerForm = document.querySelector("#registerForm form")
     const loginForm = document.querySelector("#loginForm form")
     const saveLoopBtn = document.querySelector('.save-button')
+    const compositionForm = document.querySelector('#composition-form')
     const tempoSlider = document.querySelector('#tempo-slider')
     const bpmOutput = document.querySelector('#bpm-output')
     const compositionNameInput = document.querySelector('#composition-name')
     const compositionList = document.querySelector('#composition-list')
     const userDeck = [...document.querySelectorAll('.deck input[type=checkbox]')]
+    const sequencerDiv = document.querySelector('.sequencer')
+    
+    compositionForm.style.visibility = "hidden";
+    compositionList.style.visibility = "hidden";
+    sequencerDiv.style.visibility = "hidden";
+
 
     compositionList.addEventListener('change', e => {
         console.log(e.target.value)
@@ -34,9 +41,12 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
         newUser(bodyForm, newUser => {
             loggedUser = newUser
-
-            document.querySelector('#registerForm').style.display = "none";
-            document.querySelector('#loginForm').style.display = "none";
+            compositionForm.style.visibility = "visible";
+            compositionList.style.visibility = "visible";
+            sequencerDiv.style.visibility = "visible";
+            compositionList.style.visibility = "visible";
+            registerForm.style.display = "none";
+            loginForm.style.display = "none";
             const welcomeDiv = document.querySelector('#welcome')
             welcomeDiv.style.visibility = "visible";
             const h3 = document.createElement('h3')
@@ -63,8 +73,12 @@ document.addEventListener("DOMContentLoaded", function (e) {
         loginUser(bodyForm, user => {
             loggedUser = user
 
-            document.querySelector('#registerForm').style.display = "none";
-            document.querySelector('#loginForm').style.display = "none";
+            compositionForm.style.visibility = "visible";
+            compositionList.style.visibility = "visible";
+            sequencerDiv.style.visibility = "visible";
+            compositionList.style.visibility = "visible";
+            registerForm.style.display = "none";
+            loginForm.style.display = "none";
             const welcomeDiv = document.querySelector('#welcome')
             welcomeDiv.style.visibility = "visible";
             const h3 = document.createElement('h3')
@@ -84,10 +98,12 @@ document.addEventListener("DOMContentLoaded", function (e) {
         
     })
 
-    saveLoopBtn.addEventListener('click', function () {
+    compositionForm.addEventListener('submit', function (e) {
+        e.preventDefault()
+        
         const userDeck = [...document.querySelectorAll('.deck input[type=checkbox]')];
         const layout = userDeck.map(beat => beat.checked);
-        compositionNameInput.value = ""
+        
         
 
         saveComposition({
@@ -102,6 +118,8 @@ document.addEventListener("DOMContentLoaded", function (e) {
             })
             
         })
+        
+        compositionForm.reset()
     })
 
     tempoSlider.addEventListener('input', () => bpmOutput.innerText = tempoSlider.value)

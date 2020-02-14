@@ -4,6 +4,7 @@
   "description": "Drum/Beat Machine JavaScript",
   "main": "index.js",
   "dependencies": {
+    "bootstrap": "^4.4.1",
     "tone": "14.3.21"
   },
   "devDependencies": {},

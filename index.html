@@ -4,63 +4,79 @@
   <meta charset="UTF-8">
   <title>DeveLooper</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   <script src="node_modules/tone/build/Tone.js"></script>
   <script src="src/users.js"></script>
   <script src="src/sequencer.js"></script>
-  <script src="src/bootstrap.js"></script>
+  <script src="src/ui.js"></script>
 </head>
 
 <body>
   <div class="app">
       <header>
-          <h1>🥁DeveLooper🥁</h1>
+          <h1>🥁DeveLooper🥁</h1><br>
       </header>
-      
+<div id="main-app-centre">   
 <div id="welcome" style="visibility:hidden">
 
 </div>
- 
-  <div id="registerForm">
-    <form>
-      <h2>Register</h2>
-      <div class="input-container">
-        <i class="fa fa-user icon"></i>
-        <input class="input-field" type="text" placeholder="Name" name="username">
-      </div>
-
-    
-      <div class="input-container">
-        <i class="fa fa-envelope icon"></i>
-        <input class="input-field" type="text" placeholder="Email" name="email">
-      </div>
-    
-    
-      <button type="submit" class="btn">Register</button>
-    </form>
+ <div class="row">
+   <div class="col-lg-6">
+    <div id="registerForm">
+      <form>
+        <h2>Register</h2>
+        <div class="input-container">
+          <i class="fa fa-user icon"></i>
+          <input class="input-field" type="text" placeholder="Name" name="username">
+        </div>
+  
+      
+        <div class="input-container">
+          <i class="fa fa-envelope icon"></i>
+          <input class="input-field" type="text" placeholder="Email" name="email">
+        </div>
+      
+      
+        <button type="submit" class="btn">Register</button>
+      </form>
+    </div>
+   </div>
+  
+  <div class="col-lg-6">
+    <div id="loginForm">
+      <form>
+        <h2>Login</h2>
+        <div class="input-container">
+          <i class="fa fa-user icon"></i>
+          <input class="input-field" type="text" placeholder="Name" name="username">
+        </div>
+  
+      
+        <div class="input-container">
+          <i class="fa fa-envelope icon"></i>
+          <input class="input-field" type="text" placeholder="Email" name="email">
+        </div>
+      
+      
+        <button type="submit" class="btn">Login</button>
+      </form>
+    </div>
   </div>
+  
+</div>
 
-  <div id="loginForm">
-    <form>
-      <h2>Login</h2>
-      <div class="input-container">
-        <i class="fa fa-user icon"></i>
-        <input class="input-field" type="text" placeholder="Name" name="username">
-      </div>
-
-    
-      <div class="input-container">
-        <i class="fa fa-envelope icon"></i>
-        <input class="input-field" type="text" placeholder="Email" name="email">
-      </div>
-    
-    
-      <button type="submit" class="btn">Login</button>
-    </form>
-  </div>
-
-  <select id="composition-list">
+<div class="dropdown">
+  <select class="btn btn-primary dropdown-toggle" type="button" id="composition-list" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <div class="dropdown-menu" aria-labelledby="composition-list">
     <option>Select composition</option>
-  </select>
+  </div>
+</select>
+</div>
+  <!-- <select id="composition-list">
+    <option>Select composition</option>
+  </select> -->
 
       <div class="sequencer">
           <div class="transport">
@@ -193,16 +209,23 @@
           </div>
       </div>
       </div>
+    </div>   
 
     
+<form id="composition-form">
+  <div class="input-field">
+  <input id="composition-name" type="text" placeholder="Composition name">
+  </div>
+  <button class="save-button">♩ Save Your Loop ♩</button>
 
-    <input id="composition-name" type="text" placeholder="Composition name">
-    <button class="save-button">♩ Save Your Loop ♩</button>
+</form>
 
   
 
 
   </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 </body>
 
 </html>
