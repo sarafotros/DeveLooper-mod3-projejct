@@ -35,9 +35,9 @@ function sequencer() {
     const kick = new Tone.Player("http://127.0.0.1:3000/sounds/kick-acoustic01").toDestination()
     const snare = new Tone.Player("http://127.0.0.1:3000/sounds/snare1").toDestination()
     const hiHat = new Tone.Player("http://127.0.0.1:3000/sounds/hi-hat1").toDestination()
-    const tom = new Tone.Player("http://127.0.0.1:3000/sounds/tom1").toDestination()
-    const ride = new Tone.Player("http://127.0.0.1:3000/sounds/ride-acoustic01").toDestination()
-    const crash = new Tone.Player("http://127.0.0.1:3000/sounds/crash-acoustic").toDestination()
+    const tom = new Tone.Player("http://127.0.0.1:3000/sounds/tom-analog").toDestination()
+    const ride = new Tone.Player("http://127.0.0.1:3000/sounds/ride-acoustic02").toDestination()
+    const crash = new Tone.Player("http://127.0.0.1:3000/sounds/crash-tape").toDestination()
 
 
     let index = 0

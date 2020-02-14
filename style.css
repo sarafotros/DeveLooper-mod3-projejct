@@ -149,7 +149,7 @@ form {
 	text-decoration: none;
 	outline: none;
 	color: #fff;
-	background-color: rgb(46, 159, 211);
+	background-color: rgb(73, 140, 172);
 	border-radius: 7px;
 	box-shadow: 0 5px #999;
 	margin: 10px;
@@ -454,7 +454,7 @@ li.dropdown {
 
 /* Set a style for the submit button */
 .btn {
-  background-color: rgb(91, 145, 182);
+  background-color: rgb(110, 145, 168);
   color: white;
   padding: 15px 20px;
   border: none;
@@ -476,7 +476,7 @@ li.dropdown {
   text-decoration: none;
   outline: none;
   color: #fff;
-  background-color: rgb(46, 159, 211);
+  background-color: rgb(94, 137, 156);
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
@@ -654,6 +654,7 @@ input[type="checkbox"]{
 }
 #composition-name{
   height: 35px;
+  margin-left: 55px;
   border-radius: 3px;
   text-align: center;
   background-color: rgb(235, 233, 233);

@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
     const compositionList = document.querySelector('#composition-list')
     const userDeck = [...document.querySelectorAll('.deck input[type=checkbox]')]
     const sequencerDiv = document.querySelector('.sequencer')
-    
+
     compositionForm.style.visibility = "hidden";
     compositionList.style.visibility = "hidden";
     sequencerDiv.style.visibility = "hidden";
