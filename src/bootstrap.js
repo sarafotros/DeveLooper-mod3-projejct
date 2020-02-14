@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
             loggedUser = newUser
 
             document.querySelector('#registerForm').style.display = "none";
+            document.querySelector('#loginForm').style.display = "none";
             const welcomeDiv = document.querySelector('#welcome')
             welcomeDiv.style.visibility = "visible";
             const h3 = document.createElement('h3')
@@ -62,6 +63,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
         loginUser(bodyForm, user => {
             loggedUser = user
 
+            document.querySelector('#registerForm').style.display = "none";
             document.querySelector('#loginForm').style.display = "none";
             const welcomeDiv = document.querySelector('#welcome')
             welcomeDiv.style.visibility = "visible";
@@ -85,6 +87,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
     saveLoopBtn.addEventListener('click', function () {
         const userDeck = [...document.querySelectorAll('.deck input[type=checkbox]')];
         const layout = userDeck.map(beat => beat.checked);
+        compositionNameInput.value = ""
         
 
         saveComposition({
@@ -97,6 +100,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
                 userCompositions = compositions
                 populateCompositionDropDown(compositions)
             })
+            
         })
     })
 
